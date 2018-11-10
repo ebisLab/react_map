@@ -68,9 +68,9 @@ console.error(err)
     const keys = {
       client_id: "02ONRBOTCO3H1QD0Y3U3ZL2V2BP1PYHPNXFQEXRAJOOIJHB1",
       client_secret: "IP01UHEG5AKED10WFOJYIBXWN34SMOWIPAM2W3A421KTUAFN",
-      query: "hotel",
+      query: "tech startup",
       near: "Indianapolis", 
-      v: "20181007"
+      v: "20181110"
     }
 
     axios.get(endPoint + new URLSearchParams(keys))
@@ -157,7 +157,7 @@ console.error(err)
               //console.log(myVenue.marker.isOpen)
               myVenue.marker.setIcon(greenMarker);
               myVenue.marker.setZIndex(window.google.maps.Marker.MAX_ZINDEX + 1);
-              this.map.setCenter(myVenue.marker.position)
+              this.map.setCenter(myVenue.marker.position);
 
             //open an infowindow
             
