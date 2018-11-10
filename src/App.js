@@ -69,7 +69,7 @@ console.error(err)
       client_id: "02ONRBOTCO3H1QD0Y3U3ZL2V2BP1PYHPNXFQEXRAJOOIJHB1",
       client_secret: "IP01UHEG5AKED10WFOJYIBXWN34SMOWIPAM2W3A421KTUAFN",
       query: "hotel",
-      near: "Sydney", 
+      near: "Indianapolis", 
       v: "20181007"
     }
 
@@ -100,7 +100,7 @@ console.error(err)
           }
     //Map Created
         var map = new window.google.maps.Map(document.getElementById('map'), {
-          center: {lat: -33.783, lng: 151.177},
+          center: {lat: 39.768, lng: -86.158},
           zoom: 11
         })
         this.map = map;
@@ -156,7 +156,8 @@ console.error(err)
               myVenue.marker.isOpen = true
               //console.log(myVenue.marker.isOpen)
               myVenue.marker.setIcon(greenMarker);
-              myVenue.marker.setZIndex(9999);
+              myVenue.marker.setZIndex(window.google.maps.Marker.MAX_ZINDEX + 1);
+              this.map.setCenter(myVenue.marker.position)
 
             //open an infowindow
             
